@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pied Piper</string>
+    <string name="sub_name">A Chat App</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="password_verify">Verify Password</string>
+
+    <string name="error_password">Kindly check username and password</string>
+</resources>
