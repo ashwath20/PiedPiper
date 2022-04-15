@@ -8,6 +8,8 @@ import com.riktam.local.chat.BuildConfig
 
 object LCustomPref {
     val PREF_CURRENT_USER: String = "current_user"
+    val PREF_CURRENT_USER_ID: String = "current_user_id"
+
     val PREF_IS_AUTHENTICATED:String="is_authenticated"
 
 

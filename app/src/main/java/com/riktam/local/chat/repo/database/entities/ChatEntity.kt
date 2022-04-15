@@ -5,16 +5,21 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "ChatEntity")
-class ChatEntity() {
+class ChatEntity(
     @PrimaryKey
-    var chatId: Int = 0
+    var chatId: Long = 0,
 
     @ColumnInfo(name = "message")
-    var message: String = ""
+    var message: String = "",
 
     @ColumnInfo(name = "from")
-    var from: String = ""
+    var from: Long = 0,
 
     @ColumnInfo(name = "to")
-    var to: String = ""
+    var to: Long = 0,
+
+    @ColumnInfo(name = "isGroup")
+    var isGroup: Boolean = false,
+) {
+
 }

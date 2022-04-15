@@ -6,6 +6,21 @@
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="password_verify">Verify Password</string>
+    <string name="logout">Logout</string>
+    <string name="remove_user">Remove User</string>
+    <string name="add_user">Subscribe</string>
+    <string name="delet_group">Delete Group</string>
+    <string name="add_group">Create Group</string>
+    <string name="create">Create</string>
+    <string name="group">Group</string>
+    <string name="hint_group">Enter group name</string>
+    <string name="hint_">Enter group name</string>
+    <string name="hint_remove_user">Remove User</string>
+    <string name="loggout">Logout?</string>
+    <string name="loggout_message">Would you like to logout?</string>
+    <string name="yes">Yes</string>
 
     <string name="error_password">Kindly check username and password</string>
+    <string name="error_empty_string">Data is empty</string>
+    <string name="error_no_message">Try sending message with some text</string>
 </resources>

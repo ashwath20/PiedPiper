@@ -6,12 +6,21 @@
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/drawable-v24/edit_background.xml" value="0.2111111111111111" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/drawable-v24/edit_fill.xml" value="0.2111111111111111" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2111111111111111" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/drawable-v24/rounde_view.xml" value="0.2074074074074074" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2111111111111111" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/activity_auth.xml" value="0.1793478260869565" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/activity_chat.xml" value="0.16666666666666666" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/activity_home.xml" value="0.1793478260869565" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/dialog_wih_text.xml" value="0.17300724637681159" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/edit_background.xml" value="0.1793478260869565" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/item_home.xml" value="0.17300724637681159" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/item_my_message.xml" value="0.16666666666666666" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/item_others_message.xml" value="0.16666666666666666" />
         <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/layout/layout_toast.xml" value="0.17300724637681159" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/menu/add_record_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/menu/main_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Shortc/apps/opensource/LocalChat/app/src/main/res/menu/nav_menu.xml" value="0.23229166666666667" />
       </map>
     </option>
   </component>

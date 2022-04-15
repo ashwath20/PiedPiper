@@ -15,11 +15,11 @@ import androidx.room.*
 data class UserToGroupEntity(
     @PrimaryKey
     @ColumnInfo(name = "id")
-    var id: Int,
+    var id: Long,
     @ColumnInfo(name = "userId")
-    var userId: String = "",
+    var userId: Long = 0,
     @ColumnInfo(name = "groupId")
-    var groupId: String = "",
+    var groupId: Long = 0
 ) {
 
 

@@ -7,12 +7,18 @@ import android.widget.Button
 import com.riktam.local.chat.R
 import com.riktam.local.chat.ui.activity.BaseActivity
 import com.riktam.local.chat.ui.activity.authActivity.AuthActivity
+import com.riktam.local.chat.ui.activity.homeactivity.HomeActivity
 import com.riktam.local.chat.util.LConsts.PARAM_IS_LOGIN
+import com.riktam.local.chat.util.LCustomPref
 
 class MainActivity : BaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if(LCustomPref.getBooleanPref(LCustomPref.PREF_IS_AUTHENTICATED,false)){
+           startActivity( Intent(this,HomeActivity::class.java))
+            finish()
+        }
         findViewById<Button>(R.id.bt_login).setOnClickListener(this)
         findViewById<Button>(R.id.bt_signup).setOnClickListener(this)
     }

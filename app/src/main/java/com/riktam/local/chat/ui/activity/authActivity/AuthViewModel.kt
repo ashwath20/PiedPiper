@@ -28,14 +28,6 @@ class AuthViewModel @Inject constructor() : ViewModel() {
             userAuthViewModel.postValue(authData)
         }
     }
-    fun getAllUser(){
-        val user = DbManager().User()
 
-        viewModelScope.launch {
-            val authData = user.getAllUser()
-            Log.i("usersSize","${authData.size}")
-           // userAuthViewModel.postValue(AuthData(authData.name, authData.password, true, true))
-        }
-    }
 
 }

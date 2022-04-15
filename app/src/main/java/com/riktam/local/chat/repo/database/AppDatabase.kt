@@ -19,7 +19,7 @@ import com.riktam.local.chat.repo.database.entities.UserToGroupEntity
 
 
 @Database(
-    entities = [UserEntity::class, GroupEntity::class, ChatEntity::class,UserToGroupEntity::class], version = 1
+    entities = [UserEntity::class, GroupEntity::class, ChatEntity::class,UserToGroupEntity::class], version = 2
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao

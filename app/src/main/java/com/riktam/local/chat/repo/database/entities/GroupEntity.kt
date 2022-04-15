@@ -5,14 +5,16 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "GroupEntity")
-class GroupEntity() {
+data class GroupEntity constructor(
     @PrimaryKey
     @ColumnInfo(name = "gId")
-    var gId: Int = 0
+    var gId: Long = 0,
 
     @ColumnInfo(name = "name")
-    var name: String = ""
+    var name: String = "",
 
-    @ColumnInfo(name="owner")
-    var owner : String =""
+    @ColumnInfo(name = "owner")
+    var owner: Long = 0
+) {
+
 }

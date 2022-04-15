@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_32sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        app:cardBackgroundColor="@color/nColorSecondary"
+        app:cardCornerRadius="@dimen/_8sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:layout_height="wrap_content"
+                android:text="ashwath" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:text="Hiiii How Are you..aassddfsdfhsdfhfdvskdfjadfjnnafvnadsjajdfjfdjsdvnandv."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

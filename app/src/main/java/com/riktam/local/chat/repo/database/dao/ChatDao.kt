@@ -6,11 +6,14 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.riktam.local.chat.repo.database.entities.ChatEntity
-import com.riktam.local.chat.repo.database.entities.UserEntity
+
 @Dao
 interface ChatDao {
-    @Query("SELECT * FROM ChatEntity where chatId =:id")
-    suspend fun getChat(id:String): List<ChatEntity>
+    @Query("SELECT * FROM ChatEntity where (`to`=:toId  and `from`=:fromId) or (`to`=:fromId and `from`=:toId)")
+    fun getChats(fromId: Long, toId: Long): LiveData<List<ChatEntity>>
+
+    @Query("SELECT * FROM ChatEntity where (`to`=:groupId  or `from`=:groupId) and isGroup==:isGroup")
+    fun getGroupChats(groupId: Long,isGroup:Boolean=true): LiveData<List<ChatEntity>>
 
     @Insert
     suspend fun addChat(use: ChatEntity)

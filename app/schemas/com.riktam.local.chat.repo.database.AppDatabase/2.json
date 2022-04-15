@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
   "database": {
-    "version": 1,
-    "identityHash": "e33709ba63d8bea26d7c2ee4989425c4",
+    "version": 2,
+    "identityHash": "d4e37296eca8b8930f7f4ada18d8e0bd",
     "entities": [
       {
         "tableName": "UserEntity",
@@ -48,7 +48,7 @@
       },
       {
         "tableName": "GroupEntity",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gId` INTEGER NOT NULL, `name` TEXT NOT NULL, `owner` TEXT NOT NULL, PRIMARY KEY(`gId`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gId` INTEGER NOT NULL, `name` TEXT NOT NULL, `owner` INTEGER NOT NULL, PRIMARY KEY(`gId`))",
         "fields": [
           {
             "fieldPath": "gId",
@@ -65,7 +65,7 @@
           {
             "fieldPath": "owner",
             "columnName": "owner",
-            "affinity": "TEXT",
+            "affinity": "INTEGER",
             "notNull": true
           }
         ],
@@ -124,7 +124,7 @@
       },
       {
         "tableName": "UserToGroupEntity",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `userId` TEXT NOT NULL, `groupId` TEXT NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`userId`) REFERENCES `UserEntity`(`uId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`groupId`) REFERENCES `GroupEntity`(`gId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `userId` INTEGER NOT NULL, `groupId` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`userId`) REFERENCES `UserEntity`(`uId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`groupId`) REFERENCES `GroupEntity`(`gId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -135,13 +135,13 @@
           {
             "fieldPath": "userId",
             "columnName": "userId",
-            "affinity": "TEXT",
+            "affinity": "INTEGER",
             "notNull": true
           },
           {
             "fieldPath": "groupId",
             "columnName": "groupId",
-            "affinity": "TEXT",
+            "affinity": "INTEGER",
             "notNull": true
           }
         ],
@@ -181,7 +181,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'e33709ba63d8bea26d7c2ee4989425c4')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd4e37296eca8b8930f7f4ada18d8e0bd')"
     ]
   }
 }

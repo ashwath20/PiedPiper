@@ -9,11 +9,11 @@ import com.riktam.local.chat.repo.database.entities.UserEntity
 
 @Dao
 interface UserDao {
-    @Query("SELECT * FROm UserEntity")
-    suspend fun getAllUsers(): List<UserEntity>
+    @Query("SELECT * FROm UserEntity where uId!=:selfId")
+    fun getAllUsers(selfId: Long): LiveData<List<UserEntity>>
 
     @Query("SELECT * from UserEntity where name=:uName and password=:password LIMIT 1")
-    suspend fun getUserInfo(uName: String, password: String):UserEntity?
+    suspend fun getUserInfo(uName: String, password: String): UserEntity?
 
     @Insert
     suspend fun addUser(use: UserEntity)

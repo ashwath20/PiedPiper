@@ -6,10 +6,20 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/white</item>
         <!-- Secondary brand color. -->
-
+        <item name="actionBarTheme">@style/AppBaseTheme.Toolbar</item>
         <!-- Status bar color. -->
        >
         <!-- Customize your theme here. -->
+    </style>
+    <style name="AppBaseTheme.Toolbar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+    <style name="ToolbarPopupDark" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
     </style>
 </resources>

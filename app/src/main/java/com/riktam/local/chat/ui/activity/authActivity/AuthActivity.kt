@@ -1,15 +1,19 @@
 package com.riktam.local.chat.ui.activity.authActivity
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.riktam.local.chat.R
+import com.riktam.local.chat.ui.activity.homeactivity.HomeActivity
 import com.riktam.local.chat.util.LConsts
 import com.riktam.local.chat.util.LCustomPref
 import com.riktam.local.chat.util.LCustomPref.PREF_CURRENT_USER
+import com.riktam.local.chat.util.LCustomPref.PREF_CURRENT_USER_ID
 import com.riktam.local.chat.util.LCustomPref.PREF_IS_AUTHENTICATED
 import com.riktam.local.chat.util.LMessage
 import com.riktam.local.chat.util.LUtil
@@ -32,6 +36,11 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
             if (it.isAuthenticated) {
                 LCustomPref.setPref(PREF_IS_AUTHENTICATED, true)
                 LCustomPref.setPref(PREF_CURRENT_USER, it.userName)
+                LCustomPref.setPref(PREF_CURRENT_USER_ID, it.userId)
+                Log.i("authcheck","Auth:${it.userId},${it.userName}")
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 LCustomPref.setPref(PREF_IS_AUTHENTICATED, false)
                 LCustomPref.setPref(PREF_CURRENT_USER, "")
@@ -40,7 +49,6 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
 
             }
         }
-        authViewModel.getAllUser()
 
 
     }
@@ -59,6 +67,7 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
                     }
 
                 } else {
+                    var final = "adds"
                     val repass = etRePass.text.toString()
                     if (LUtil.cleanUserInput(userName, pass, repass)) {
                         authViewModel.addUser(userName, pass)
